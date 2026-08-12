@@ -35,6 +35,7 @@ export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    const canTrackPointer = window.matchMedia("(pointer: fine)").matches;
     const handlePointer = (event: PointerEvent) => {
       document.documentElement.style.setProperty("--mouse-x", `${event.clientX}px`);
       document.documentElement.style.setProperty("--mouse-y", `${event.clientY}px`);
@@ -44,11 +45,15 @@ export default function Home() {
       setScrollProgress(total > 0 ? window.scrollY / total : 0);
     };
 
-    window.addEventListener("pointermove", handlePointer, { passive: true });
+    if (canTrackPointer) {
+      window.addEventListener("pointermove", handlePointer, { passive: true });
+    }
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => {
-      window.removeEventListener("pointermove", handlePointer);
+      if (canTrackPointer) {
+        window.removeEventListener("pointermove", handlePointer);
+      }
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -120,21 +125,21 @@ export default function Home() {
         <p className="hero-index" aria-hidden="true">01—26</p>
       </section>
 
-      <div className="marquee" aria-label="Highlights">
+      <div className="marquee" role="region" aria-label="Highlights">
         <div className="marquee-track">
-          <span>FOUNDER OF SHIURBANK</span><i>◆</i>
-          <span>BUILDING AT ARTSCROLL</span><i>◆</i>
-          <span>SHIPPING WEB + MOBILE + VOICE</span><i>◆</i>
-          <span>FOUNDER OF SHIURBANK</span><i>◆</i>
-          <span>BUILDING AT ARTSCROLL</span><i>◆</i>
-          <span>SHIPPING WEB + MOBILE + VOICE</span><i>◆</i>
+          <span>I FOUNDED SHIURBANK</span><i>◆</i>
+          <span>I BUILD AT ARTSCROLL</span><i>◆</i>
+          <span>I SHIP WEB + MOBILE + VOICE</span><i>◆</i>
+          <span>I FOUNDED SHIURBANK</span><i>◆</i>
+          <span>I BUILD AT ARTSCROLL</span><i>◆</i>
+          <span>I SHIP WEB + MOBILE + VOICE</span><i>◆</i>
         </div>
       </div>
 
       <section className="work-section" id="work">
         <div className="section-heading">
           <p className="section-kicker">Selected work · 2025—Now</p>
-          <h2>Real products.<br />Real people using them.</h2>
+          <h2>Products I&apos;ve built.<br />People actually use them.</h2>
           <p className="section-note">
             I work across product, design, engineering, infrastructure, and launch.
             The interesting part is making all of it feel like one thing.
@@ -147,12 +152,12 @@ export default function Home() {
             <p className="case-label">Founder & sole product engineer</p>
             <h3>ShiurBank</h3>
             <p className="case-tagline">
-              The Torah platform built for how people actually learn.
+              I built ShiurBank for how people actually learn Torah.
             </p>
             <p className="case-description">
-              A production platform for teachers and institutions to publish,
-              organize, share, and monetize Torah content—across the web, iOS,
-              Android, and a phone call-in experience.
+              I founded, built, and run a production platform where teachers and
+              institutions publish, organize, share, and monetize Torah
+              content—across the web, iOS, Android, and a phone call-in experience.
             </p>
             <ul className="feature-list" aria-label="ShiurBank capabilities">
               <li>Product strategy</li>
@@ -163,13 +168,17 @@ export default function Home() {
               <li>Production operations</li>
             </ul>
             <ExternalLink className="project-link" href="https://www.shiurbank.org/">
-              Visit live product <Arrow />
+              See ShiurBank live <Arrow />
             </ExternalLink>
           </div>
           <div className="case-visual shiurbank-visual">
             <img
               src="/projects/shiurbank-home-2026.png"
               alt="ShiurBank home feed with teacher subscriptions, sponsorship options, and recent shiurim"
+              width="2119"
+              height="1147"
+              loading="lazy"
+              decoding="async"
             />
             <div className="visual-stamp">LIVE PRODUCT · 2026</div>
           </div>
@@ -180,11 +189,12 @@ export default function Home() {
           <div className="case-copy">
             <p className="case-label">Product design & engineering</p>
             <h3>Levin Times</h3>
-            <p className="case-tagline">A newsroom, not just another news site.</p>
+            <p className="case-tagline">I built a newsroom, not just another news site.</p>
             <p className="case-description">
-              An opinion, analysis, and culture publication with the full editorial
-              system behind it: reader accounts, contributor applications, role-based
-              workflows, media management, submissions, and publishing.
+              I designed and built an opinion, analysis, and culture publication,
+              along with the full editorial system behind it: reader accounts,
+              contributor applications, role-based workflows, media management,
+              submissions, and publishing.
             </p>
             <ul className="feature-list" aria-label="Levin Times capabilities">
               <li>Editorial system</li>
@@ -202,6 +212,10 @@ export default function Home() {
               <img
                 src="/projects/levin-times-home-2026.png"
                 alt="Levin Times homepage with featured reporting and the latest articles"
+                width="2119"
+                height="1147"
+                loading="lazy"
+                decoding="async"
               />
               <span className="product-shot-label">LIVE PUBLICATION · 2026</span>
             </div>
@@ -213,11 +227,12 @@ export default function Home() {
           <div className="case-copy">
             <p className="case-label">AI product development</p>
             <h3>Torahly</h3>
-            <p className="case-tagline">Find the source behind any Torah phrase.</p>
+            <p className="case-tagline">I built a faster way to find the source behind any Torah phrase.</p>
             <p className="case-description">
-              A source-finding system that searches Tanach, Mishnah, Gemara, and
-              available commentary with deterministic matching—returning ranked,
-              bilingual results people can inspect and trust.
+              I built a source-finding system that searches Tanach, Mishnah,
+              Gemara, and available commentary with deterministic
+              matching—returning ranked, bilingual results people can inspect
+              and trust.
             </p>
             <ul className="feature-list" aria-label="Torahly capabilities">
               <li>Deterministic retrieval</li>
@@ -235,6 +250,10 @@ export default function Home() {
               <img
                 src="/projects/torahly-source-finder-2026.png"
                 alt="Torahly Source Finder showing ranked Hebrew and English matches for a Torah phrase"
+                width="2119"
+                height="1147"
+                loading="lazy"
+                decoding="async"
               />
               <span className="product-shot-label">SOURCE FINDER · LIVE</span>
             </div>
@@ -256,29 +275,29 @@ export default function Home() {
             edge cases that only appear in production.
           </p>
           <p>
-            The goal is never technology for its own sake. It&apos;s to make something
+            My goal is never technology for its own sake. I want to make something
             technically serious feel obvious, useful, and genuinely good to use.
           </p>
-          <div className="skill-cloud" aria-label="Skills">
+          <div className="skill-cloud" role="list" aria-label="Skills">
             {[
               "React", "React Native", "TypeScript", "Node.js", "PostgreSQL",
               "Supabase", "LLM systems", "Product design", "Shipping",
-            ].map((skill) => <span key={skill}>{skill}</span>)}
+            ].map((skill) => <span role="listitem" key={skill}>{skill}</span>)}
           </div>
         </div>
       </section>
 
       <section className="context-section" aria-labelledby="context-title">
         <div className="context-intro">
-          <p className="section-kicker">Experience & foundation</p>
-          <h2 id="context-title">Built across the stack.<br />Grounded in the outcome.</h2>
+          <p className="section-kicker">My experience & foundation</p>
+          <h2 id="context-title">I&apos;ve built across the stack.<br />I stay focused on the outcome.</h2>
           <p>
             My path spans AI product development, full-stack engineering,
             research, and operations—experience that helps me turn a fuzzy
             problem into a product people can rely on.
           </p>
           <a href="/resume/isaac-levin-resume.pdf" target="_blank" rel="noreferrer">
-            Read the full résumé <Arrow />
+            Read my résumé <Arrow />
           </a>
         </div>
         <div className="timeline">
@@ -287,7 +306,7 @@ export default function Home() {
             <div>
               <h3>AI Product Developer</h3>
               <p className="timeline-place">ArtScroll</p>
-              <p>Building explainable AI tools for manuscript review, source verification, and Hebrew-English text discovery.</p>
+              <p>I build explainable AI tools for manuscript review, source verification, and Hebrew-English text discovery.</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -295,7 +314,7 @@ export default function Home() {
             <div>
               <h3>Founder & Product Engineer</h3>
               <p className="timeline-place">ShiurBank</p>
-              <p>Owning product, engineering, infrastructure, operations, and launch across every surface.</p>
+              <p>I own the product, engineering, infrastructure, operations, and launch across every surface.</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -303,7 +322,7 @@ export default function Home() {
             <div>
               <h3>AI Research Intern</h3>
               <p className="timeline-place">Shapiro + Raj</p>
-              <p>Built multimodal OCR, search, and longitudinal research synthesis workflows.</p>
+              <p>I built multimodal OCR, search, and longitudinal research synthesis workflows.</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -311,7 +330,7 @@ export default function Home() {
             <div>
               <h3>Capital Markets Intern</h3>
               <p className="timeline-place">Cushman & Wakefield</p>
-              <p>Automated deal workflows and eliminated more than 200 hours of manual work.</p>
+              <p>I automated deal workflows and eliminated more than 200 hours of manual work.</p>
             </div>
           </div>
           <div className="timeline-item education">

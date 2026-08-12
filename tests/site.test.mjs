@@ -9,6 +9,8 @@ test("the production build contains the portfolio metadata", async () => {
 
   assert.match(html, /<title>Isaac Levin — Product Engineer &amp; Founder<\/title>/i);
   assert.match(html, /https:\/\/isaaclev\.in\/og\.png/);
+  assert.match(html, /I&#39;m Isaac Levin|I'm Isaac Levin/);
+  assert.doesNotMatch(html, /The portfolio of Isaac Levin/);
   assert.match(html, /<div id="root"><\/div>/);
   assert.doesNotMatch(html, /chatgpt|codex|vinext|cloudflare/i);
 });
@@ -25,9 +27,14 @@ test("the source keeps the project content and accessibility affordances", async
   assert.match(app, /shiurbank-home-2026\.png/);
   assert.match(app, /levin-times-home-2026\.png/);
   assert.match(app, /torahly-source-finder-2026\.png/);
+  assert.match(app, /Read my résumé/);
+  assert.doesNotMatch(app, /Read the full résumé/);
+  assert.match(app, /loading="lazy"/);
   assert.doesNotMatch(app, /[↗↓↑→←↔]/);
   assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
   assert.match(styles, /prefers-reduced-motion/i);
+  assert.match(styles, /@media \(max-width: 360px\)/);
+  assert.match(styles, /min-height: 44px/);
   await access(new URL("dist/resume/isaac-levin-resume.pdf", root));
   await access(new URL("dist/og.png", root));
 });
