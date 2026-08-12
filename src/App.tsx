@@ -94,7 +94,7 @@ export default function Home() {
             I turn ambitious ideas into products that feel <em>inevitable.</em>
           </h1>
           <p className="hero-intro reveal-up delay-2">
-            I&apos;m Isaac Levin—a builder and founder creating useful technology
+            I&apos;m Isaac Levin, a builder and founder creating useful technology
             at the intersection of AI, media, and Torah.
           </p>
           <div className="hero-actions reveal-up delay-3">
@@ -122,7 +122,7 @@ export default function Home() {
           <span className="float-label label-three">AI</span>
         </div>
 
-        <p className="hero-index" aria-hidden="true">01—26</p>
+        <p className="hero-index" aria-hidden="true">01.26</p>
       </section>
 
       <div className="marquee" role="region" aria-label="Highlights">
@@ -138,7 +138,7 @@ export default function Home() {
 
       <section className="work-section" id="work">
         <div className="section-heading">
-          <p className="section-kicker">Selected work · 2025—Now</p>
+          <p className="section-kicker">Selected work · 2025 to Now</p>
           <h2>Products built for real use.<br />Across every surface.</h2>
         </div>
 
@@ -152,7 +152,7 @@ export default function Home() {
             </p>
             <p className="case-description">
               A production platform where teachers and institutions publish,
-              organize, share, and monetize Torah content—across the web, iOS,
+              organize, share, and monetize Torah content across the web, iOS,
               Android, and a phone call-in experience. Built and operated end to
               end.
             </p>
@@ -227,7 +227,7 @@ export default function Home() {
             <p className="case-tagline">A faster way to find the source behind any Torah phrase.</p>
             <p className="case-description">
               A source-finding system that searches Tanach, Mishnah, Gemara, and
-              available commentary with deterministic matching—returning ranked,
+              available commentary with deterministic matching, returning ranked,
               bilingual results people can inspect and trust.
             </p>
             <ul className="feature-list" aria-label="Torahly capabilities">
@@ -272,7 +272,8 @@ export default function Home() {
           </p>
           <p>
             The goal is to make something technically serious feel obvious,
-            useful, and genuinely good to use—not technology for its own sake.
+            useful, and genuinely good to use. Technology should serve the
+            experience, not become the experience.
           </p>
           <div className="skill-cloud" role="list" aria-label="Skills">
             {[
@@ -289,7 +290,7 @@ export default function Home() {
           <h2 id="context-title">Built across the stack.<br />Focused on the outcome.</h2>
           <p>
             My path spans AI product development, full-stack engineering,
-            research, and operations—experience that helps me turn a fuzzy
+            research, and operations. That experience helps me turn a fuzzy
             problem into a product people can rely on.
           </p>
           <a href="/resume/isaac-levin-resume.pdf" target="_blank" rel="noreferrer">
@@ -298,7 +299,7 @@ export default function Home() {
         </div>
         <div className="timeline">
           <div className="timeline-item current">
-            <span className="timeline-year">2026—NOW</span>
+            <span className="timeline-year">2026 TO NOW</span>
             <div>
               <h3>AI Product Developer</h3>
               <p className="timeline-place">ArtScroll</p>
@@ -306,7 +307,7 @@ export default function Home() {
             </div>
           </div>
           <div className="timeline-item">
-            <span className="timeline-year">2025—NOW</span>
+            <span className="timeline-year">2025 TO NOW</span>
             <div>
               <h3>Founder & Product Engineer</h3>
               <p className="timeline-place">ShiurBank</p>

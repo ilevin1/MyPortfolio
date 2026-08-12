@@ -7,10 +7,11 @@ const root = new URL("../", import.meta.url);
 test("the production build contains the portfolio metadata", async () => {
   const html = await readFile(new URL("dist/index.html", root), "utf8");
 
-  assert.match(html, /<title>Isaac Levin — Product Engineer &amp; Founder<\/title>/i);
+  assert.match(html, /<title>Isaac Levin \| Product Engineer &amp; Founder<\/title>/i);
   assert.match(html, /https:\/\/isaaclev\.in\/og\.png/);
   assert.match(html, /I&#39;m Isaac Levin|I'm Isaac Levin/);
   assert.doesNotMatch(html, /The portfolio of Isaac Levin/);
+  assert.doesNotMatch(html, /—/);
   assert.match(html, /<div id="root"><\/div>/);
   assert.doesNotMatch(html, /chatgpt|codex|vinext|cloudflare/i);
 });
@@ -31,6 +32,7 @@ test("the source keeps the project content and accessibility affordances", async
   assert.doesNotMatch(app, /Read the full résumé/);
   assert.match(app, /loading="lazy"/);
   assert.doesNotMatch(app, /[↗↓↑→←↔]/);
+  assert.doesNotMatch(app, /—/);
   assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
   assert.doesNotMatch(app, /Product, design, engineering, infrastructure, and launch/);
   assert.match(app, /FOUNDER · SHIURBANK/);
