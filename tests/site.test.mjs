@@ -32,6 +32,14 @@ test("the source keeps the project content and accessibility affordances", async
   assert.match(app, /loading="lazy"/);
   assert.doesNotMatch(app, /[↗↓↑→←↔]/);
   assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
+  assert.match(app, /FOUNDER · SHIURBANK/);
+  assert.match(app, /AI PRODUCT DEVELOPMENT · ARTSCROLL/);
+  assert.match(app, /WEB · MOBILE · VOICE/);
+  assert.doesNotMatch(app, /I FOUNDED|I BUILD AT|I SHIP/);
+  assert.doesNotMatch(
+    app,
+    /I built ShiurBank|I built a newsroom|I built a faster way|I built a source-finding/,
+  );
   assert.match(styles, /prefers-reduced-motion/i);
   assert.match(styles, /@media \(max-width: 360px\)/);
   assert.match(styles, /min-height: 44px/);
