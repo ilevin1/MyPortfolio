@@ -188,7 +188,7 @@ img { display: block; max-width: 100%; }
 }
 .project-sticker {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   padding: 8px 10px;
   border: 1px solid var(--ink);
   background: var(--ink);
@@ -199,7 +199,7 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
 }
 .sticker-one { right: -5%; top: 15%; transform: rotate(7deg); }
-.sticker-two { left: -8%; bottom: 13%; transform: rotate(-6deg); }
+.sticker-two { left: 8%; bottom: -2%; transform: rotate(-6deg); }
 .sticker-three {
   right: -7%;
   top: 49%;
@@ -432,7 +432,7 @@ footer a { min-height: 44px; display: inline-flex; align-items: center; }
   .project-featured { grid-template-columns: 1fr; }
   .project-featured .project-media img { min-height: 0; aspect-ratio: 16 / 9; }
   .sticker-one, .sticker-three { right: 0; }
-  .sticker-two { left: 0; }
+  .sticker-two { left: 6%; }
 }
 
 @media (max-width: 700px) {
@@ -484,6 +484,7 @@ footer a { min-height: 44px; display: inline-flex; align-items: center; }
   .work-heading h2 { font-size: 45px; }
   .portrait-stage { min-height: 380px; }
   .project-sticker { font-size: 8px; padding: 7px 8px; }
+  .sticker-two { left: 4%; bottom: -1%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

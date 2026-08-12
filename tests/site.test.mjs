@@ -44,6 +44,8 @@ test("the source stays focused on the work", async () => {
   );
   assert.match(styles, /prefers-reduced-motion/i);
   assert.match(styles, /@keyframes ticker/);
+  assert.match(styles, /\.project-sticker\s*\{[^}]*z-index: 1;/s);
+  assert.match(styles, /\.sticker-two \{ left: 8%; bottom: -2%;/);
   assert.match(styles, /@media \(max-width: 360px\)/);
   assert.match(styles, /min-height: 44px/);
   await access(new URL("dist/resume/isaac-levin-resume.pdf", root));
