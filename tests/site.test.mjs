@@ -22,8 +22,9 @@ test("the source stays focused on the work", async () => {
     readFile(new URL("src/styles.css", root), "utf8"),
   ]);
 
-  assert.match(app, /Products I&apos;ve built/);
+  assert.match(app, /Products I&apos;ve <em>built\.<\/em>/);
   assert.match(app, /A selection of products across Torah, media, and AI/);
+  assert.match(app, /project-marquee/);
   assert.match(app, /ShiurBank/);
   assert.match(app, /Privacy and control for Torah teachers/);
   assert.match(app, /Teacher privacy/);
@@ -42,6 +43,7 @@ test("the source stays focused on the work", async () => {
     /Open to good problems|Start a conversation|Have a hard problem|Read my résumé|Copy email|skill-cloud|timeline|contact-section|about-section/,
   );
   assert.match(styles, /prefers-reduced-motion/i);
+  assert.match(styles, /@keyframes ticker/);
   assert.match(styles, /@media \(max-width: 360px\)/);
   assert.match(styles, /min-height: 44px/);
   await access(new URL("dist/resume/isaac-levin-resume.pdf", root));

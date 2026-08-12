@@ -34,22 +34,43 @@ export default function Home() {
       <section className="intro" id="top">
         <div className="intro-copy">
           <p className="eyebrow">Isaac Levin · Portfolio</p>
-          <h1>Products I&apos;ve built.</h1>
+          <h1>Products I&apos;ve <em>built.</em></h1>
           <p>A selection of products across Torah, media, and AI.</p>
         </div>
 
-        <figure className="portrait">
-          <img src="/isaac-levin.png" alt="Isaac Levin" />
-          <figcaption>
-            <span>Isaac Levin</span>
-            <span>Queens, NY · 2026</span>
-          </figcaption>
-        </figure>
+        <div className="portrait-stage">
+          <span className="portrait-shape shape-acid" aria-hidden="true" />
+          <span className="portrait-shape shape-blue" aria-hidden="true" />
+          <figure className="portrait">
+            <img src="/isaac-levin.png" alt="Isaac Levin" />
+            <figcaption>
+              <span>Isaac Levin</span>
+              <span>Queens, NY · 2026</span>
+            </figcaption>
+          </figure>
+          <span className="project-sticker sticker-one">ShiurBank</span>
+          <span className="project-sticker sticker-two">Levin Times</span>
+          <span className="project-sticker sticker-three">Torahly</span>
+        </div>
       </section>
+
+      <div className="project-marquee" aria-label="Featured projects">
+        <div className="marquee-track">
+          <span>ShiurBank</span><i>◆</i>
+          <span>Levin Times</span><i>◆</i>
+          <span>Torahly</span><i>◆</i>
+          <span>ShiurBank</span><i>◆</i>
+          <span>Levin Times</span><i>◆</i>
+          <span>Torahly</span><i>◆</i>
+        </div>
+      </div>
 
       <section className="work" id="work" aria-labelledby="work-title">
         <div className="work-heading">
-          <p className="section-kicker">Selected work</p>
+          <div>
+            <p className="section-kicker">Selected work</p>
+            <span className="work-count">01 / 03</span>
+          </div>
           <h2 id="work-title">Three products.<br />Built for real use.</h2>
         </div>
 
