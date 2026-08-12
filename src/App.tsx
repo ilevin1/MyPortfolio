@@ -1,6 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import "./styles.css";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -10,7 +9,7 @@ function ExternalLink({
   className = "",
 }: {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }) {
   return (
@@ -232,7 +231,7 @@ export default function Home() {
             </ExternalLink>
           </div>
           <div className="case-visual torahly-visual">
-            <div className="comparison" style={{ "--reveal": `${reveal}%` } as React.CSSProperties}>
+            <div className="comparison" style={{ "--reveal": `${reveal}%` } as CSSProperties}>
               <img className="before-image" src="/projects/torahly-before.png" alt="Raw Torah notes before processing" />
               <div className="after-wrap">
                 <img src="/projects/torahly-after.png" alt="Structured Torahly study guide" />
