@@ -22,7 +22,9 @@ test("the source keeps the project content and accessibility affordances", async
   assert.match(app, /ShiurBank/);
   assert.match(app, /Levin Times/);
   assert.match(app, /Torahly/);
-  assert.match(app, /aria-label="Compare raw notes with the generated study guide"/);
+  assert.match(app, /shiurbank-home-2026\.png/);
+  assert.match(app, /torahly-source-finder-2026\.png/);
+  assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
   assert.match(styles, /prefers-reduced-motion/i);
   await access(new URL("dist/resume/isaac-levin-resume.pdf", root));
   await access(new URL("dist/og.png", root));

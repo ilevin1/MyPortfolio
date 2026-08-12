@@ -189,13 +189,10 @@ button, input { font: inherit; }
 
 .case-visual { min-width: 0; position: relative; }
 .shiurbank-case { --case-color: #20d6d0; }
-.shiurbank-visual { background: #a9e9fb; border: 1px solid var(--ink); padding: 46px 22px 22px; box-shadow: 14px 14px 0 var(--ink); transform: rotate(1deg); transition: transform .35s ease, box-shadow .35s ease; overflow: hidden; }
+.shiurbank-visual { background: var(--ink); border: 1px solid var(--ink); padding: 12px; box-shadow: 14px 14px 0 var(--ink); transform: rotate(1deg); transition: transform .35s ease, box-shadow .35s ease; overflow: hidden; }
 .shiurbank-visual:hover { transform: rotate(-.6deg) translateY(-5px); box-shadow: 19px 21px 0 var(--blue); }
-.shiurbank-visual img { display: block; width: 100%; border: 1px solid rgba(17,17,15,.2); }
-.browser-bar { position: absolute; top: 0; left: 0; right: 0; height: 46px; background: white; border-bottom: 1px solid var(--ink); display: flex; align-items: center; gap: 7px; padding: 0 14px; }
-.browser-bar span { width: 9px; height: 9px; background: var(--ink); border-radius: 50%; }
-.browser-bar small { margin-left: auto; margin-right: auto; font: 9px var(--font-geist-mono), monospace; color: var(--muted); }
-.visual-stamp { position: absolute; bottom: 22px; right: 22px; background: var(--acid); border: 1px solid var(--ink); padding: 8px 11px; font: 9px var(--font-geist-mono), monospace; letter-spacing: .08em; }
+.shiurbank-visual img { display: block; width: 100%; border: 1px solid rgba(255,255,255,.2); border-radius: 7px; }
+.visual-stamp { position: absolute; bottom: 24px; right: 24px; background: var(--acid); border: 1px solid var(--ink); padding: 8px 11px; font: 9px var(--font-geist-mono), monospace; letter-spacing: .08em; }
 
 .levin-case { --case-color: #a91d30; }
 .levin-visual { min-height: 540px; display: grid; place-items: center; perspective: 1200px; }
@@ -211,17 +208,11 @@ button, input { font: inherit; }
 .newspaper-grid span { display: block; height: 52px; margin-top: 10px; background: repeating-linear-gradient(to bottom, #777 0 1px, transparent 1px 7px); opacity: .45; }
 
 .torahly-case { --case-color: var(--acid); }
-.torahly-visual { padding: 22px; border: 1px solid var(--ink); background: #dce9f7; box-shadow: 14px 14px 0 var(--ink); }
-.comparison { --reveal: 54%; position: relative; aspect-ratio: 1.25; overflow: hidden; background: white; border: 1px solid rgba(17,17,15,.25); }
-.comparison img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.after-wrap { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--reveal)) 0 0); }
-.compare-line { position: absolute; top: 0; bottom: 0; left: var(--reveal); width: 2px; background: var(--orange); transform: translateX(-1px); display: grid; place-items: center; }
-.compare-line span { width: 34px; height: 34px; border-radius: 50%; background: var(--orange); color: white; display: grid; place-items: center; font-weight: 900; }
-.comparison input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; }
-.compare-label { position: absolute; top: 15px; z-index: 2; padding: 6px 9px; background: var(--ink); color: white; font: 9px var(--font-geist-mono), monospace; letter-spacing: .07em; }
-.before-label { right: 15px; }
-.after-label { left: 15px; background: var(--blue); }
-.drag-note { margin: 14px 0 0; text-align: center; font: 10px var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
+.torahly-visual { padding: 12px; border: 1px solid var(--ink); background: var(--ink); box-shadow: 14px 14px 0 var(--ink); transform: rotate(-.7deg); transition: transform .35s ease, box-shadow .35s ease; }
+.torahly-visual:hover { transform: rotate(.4deg) translateY(-5px); box-shadow: 19px 21px 0 #26bfcf; }
+.product-shot { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 7px; }
+.product-shot img { display: block; width: 100%; }
+.product-shot-label { position: absolute; bottom: 12px; right: 12px; background: var(--acid); border: 1px solid var(--ink); padding: 8px 11px; font: 9px var(--font-geist-mono), monospace; letter-spacing: .08em; }
 
 .about-section { background: var(--ink); color: white; padding: 150px clamp(24px, 6.5vw, 118px); display: grid; grid-template-columns: 1.15fr .85fr; gap: 10vw; }
 .about-statement h2 { font-size: clamp(52px, 6.5vw, 104px); }
@@ -323,7 +314,6 @@ footer p { margin: 0; }
   .portrait-frame { width: 78%; box-shadow: 10px 10px 0 var(--ink); }
   .portrait-frame figcaption { flex-direction: column; gap: 4px; }
   .float-label { font-size: 8px; }
-  .browser-bar small { display: none; }
   .shiurbank-visual, .torahly-visual { padding-left: 12px; padding-right: 12px; box-shadow: 8px 8px 0 var(--ink); }
   .newspaper { width: 94%; }
   .newspaper-grid { gap: 7px; }

@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import "./styles.css";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
@@ -25,7 +25,6 @@ function ExternalLink({
 }
 
 export default function Home() {
-  const [reveal, setReveal] = useState(54);
   const [copied, setCopied] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -162,15 +161,11 @@ export default function Home() {
             </ExternalLink>
           </div>
           <div className="case-visual shiurbank-visual">
-            <div className="browser-bar">
-              <span /><span /><span />
-              <small>torah.yourinstitution.org</small>
-            </div>
             <img
-              src="/projects/shiurbank-institution.png"
-              alt="ShiurBank institution library interface"
+              src="/projects/shiurbank-home-2026.png"
+              alt="ShiurBank home feed with teacher subscriptions, sponsorship options, and recent shiurim"
             />
-            <div className="visual-stamp">WEB · iOS · ANDROID · PHONE</div>
+            <div className="visual-stamp">LIVE PRODUCT · 2026</div>
           </div>
         </article>
 
@@ -213,42 +208,31 @@ export default function Home() {
           <div className="case-copy">
             <p className="case-label">AI product development</p>
             <h3>Torahly</h3>
-            <p className="case-tagline">From rough notes to an actual study system.</p>
+            <p className="case-tagline">Find the source behind any Torah phrase.</p>
             <p className="case-description">
-              AI-powered Torah learning tools that transform raw notes into structured
-              study guides and make classical sources explorable through grounded search
-              and conversation.
+              A source-finding system that searches Tanach, Mishnah, Gemara, and
+              available commentary with deterministic matching—returning ranked,
+              bilingual results people can inspect and trust.
             </p>
             <ul className="feature-list" aria-label="Torahly capabilities">
-              <li>Generative AI</li>
-              <li>Source-grounded answers</li>
-              <li>Study guides</li>
-              <li>Semantic retrieval</li>
-              <li>Learning UX</li>
+              <li>Deterministic retrieval</li>
+              <li>Hebrew + English</li>
+              <li>Ranked matching</li>
+              <li>Source navigation</li>
+              <li>Search UX</li>
             </ul>
             <ExternalLink className="project-link" href="https://www.torahly.com/">
               Explore Torahly <Arrow />
             </ExternalLink>
           </div>
           <div className="case-visual torahly-visual">
-            <div className="comparison" style={{ "--reveal": `${reveal}%` } as CSSProperties}>
-              <img className="before-image" src="/projects/torahly-before.png" alt="Raw Torah notes before processing" />
-              <div className="after-wrap">
-                <img src="/projects/torahly-after.png" alt="Structured Torahly study guide" />
-              </div>
-              <div className="compare-line" aria-hidden="true"><span>↔</span></div>
-              <span className="compare-label before-label">RAW NOTES</span>
-              <span className="compare-label after-label">STUDY GUIDE</span>
-              <input
-                aria-label="Compare raw notes with the generated study guide"
-                type="range"
-                min="8"
-                max="92"
-                value={reveal}
-                onChange={(event) => setReveal(Number(event.target.value))}
+            <div className="product-shot">
+              <img
+                src="/projects/torahly-source-finder-2026.png"
+                alt="Torahly Source Finder showing ranked Hebrew and English matches for a Torah phrase"
               />
+              <span className="product-shot-label">SOURCE FINDER · LIVE</span>
             </div>
-            <p className="drag-note">Drag to see the transformation</p>
           </div>
         </article>
       </section>
@@ -281,11 +265,12 @@ export default function Home() {
 
       <section className="context-section" aria-labelledby="context-title">
         <div className="context-intro">
-          <p className="section-kicker">The context</p>
-          <h2 id="context-title">Portfolio first.<br />Résumé underneath.</h2>
+          <p className="section-kicker">Experience & foundation</p>
+          <h2 id="context-title">Built across the stack.<br />Grounded in the outcome.</h2>
           <p>
-            The work should make the case. The experience explains how I learned
-            to make it.
+            My path spans AI product development, full-stack engineering,
+            research, and operations—experience that helps me turn a fuzzy
+            problem into a product people can rely on.
           </p>
           <a href="/resume/isaac-levin-resume.pdf" target="_blank" rel="noreferrer">
             Read the full résumé <Arrow />
