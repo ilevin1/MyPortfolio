@@ -145,24 +145,24 @@ export default function Home() {
         <article className="case-study shiurbank-case">
           <div className="case-number">01</div>
           <div className="case-copy">
-            <p className="case-label">Founder & sole product engineer</p>
+            <p className="case-label">Founder · Product · Engineering · Growth</p>
             <h3>ShiurBank</h3>
             <p className="case-tagline">
-              Torah learning, built around how people actually learn.
+              Privacy and control for Torah teachers.
             </p>
             <p className="case-description">
-              A production platform where teachers and institutions publish,
-              organize, share, and monetize Torah content across the web, iOS,
-              Android, and a phone call-in experience. Built and operated end to
-              end.
+              ShiurBank lets teachers and institutions publish, organize, share,
+              and monetize Torah content while controlling who can see and hear
+              it. Built across web, iOS, Android, and phone, then grown through
+              direct sales, teacher outreach, onboarding, and marketing.
             </p>
             <ul className="feature-list" aria-label="ShiurBank capabilities">
-              <li>Product strategy</li>
-              <li>Web + mobile</li>
+              <li>Teacher privacy</li>
+              <li>Access controls</li>
+              <li>Web + mobile + phone</li>
               <li>Payments</li>
               <li>Media infrastructure</li>
-              <li>Analytics</li>
-              <li>Production operations</li>
+              <li>Sales & marketing</li>
             </ul>
             <ExternalLink className="project-link" href="https://www.shiurbank.org/">
               See ShiurBank live <Arrow />
@@ -266,9 +266,10 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p>
-            I&apos;m a product-minded engineer who likes taking an idea from its first
-            sketch through databases, interfaces, mobile releases, and the strange
-            edge cases that only appear in production.
+            I&apos;m a product-minded engineer, marketer, and salesman who likes
+            taking an idea from its first sketch through databases, interfaces,
+            mobile releases, and the strange edge cases that only appear in
+            production.
           </p>
           <p>
             The goal is to make something technically serious feel obvious,
@@ -278,7 +279,8 @@ export default function Home() {
           <div className="skill-cloud" role="list" aria-label="Skills">
             {[
               "React", "React Native", "TypeScript", "Node.js", "PostgreSQL",
-              "Supabase", "LLM systems", "Product design", "Shipping",
+              "Supabase", "LLM systems", "Product design", "Growth marketing",
+              "Sales",
             ].map((skill) => <span role="listitem" key={skill}>{skill}</span>)}
           </div>
         </div>
@@ -290,8 +292,8 @@ export default function Home() {
           <h2 id="context-title">Built across the stack.<br />Focused on the outcome.</h2>
           <p>
             My path spans AI product development, full-stack engineering,
-            research, and operations. That experience helps me turn a fuzzy
-            problem into a product people can rely on.
+            marketing, sales, research, and operations. That experience helps me
+            turn a fuzzy problem into a product people can rely on.
           </p>
           <a href="/resume/isaac-levin-resume.pdf" target="_blank" rel="noreferrer">
             Read my résumé <Arrow />
@@ -311,7 +313,7 @@ export default function Home() {
             <div>
               <h3>Founder & Product Engineer</h3>
               <p className="timeline-place">ShiurBank</p>
-              <p>Owning product, engineering, infrastructure, operations, and launch across every surface.</p>
+              <p>Building and growing a privacy-first platform across product, engineering, infrastructure, marketing, sales, and operations.</p>
             </div>
           </div>
           <div className="timeline-item">

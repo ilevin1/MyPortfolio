@@ -23,6 +23,12 @@ test("the source keeps the project content and accessibility affordances", async
   ]);
 
   assert.match(app, /ShiurBank/);
+  assert.match(app, /Privacy and control for Torah teachers/);
+  assert.match(app, /Teacher privacy/);
+  assert.match(app, /Access controls/);
+  assert.match(app, /Sales & marketing/);
+  assert.match(app, /product-minded engineer, marketer, and salesman/);
+  assert.match(app, /Growth marketing/);
   assert.match(app, /Levin Times/);
   assert.match(app, /Torahly/);
   assert.match(app, /shiurbank-home-2026\.png/);
