@@ -12,3 +12,5 @@ coverage/
 *.tsbuildinfo
 
 work/
+.vercel
+.env*
