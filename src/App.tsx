@@ -48,9 +48,6 @@ export default function Home() {
               <span>Queens, NY · 2026</span>
             </figcaption>
           </figure>
-          <span className="project-sticker sticker-one">ShiurBank</span>
-          <span className="project-sticker sticker-two">Levin Times</span>
-          <span className="project-sticker sticker-three">Torahly</span>
         </div>
       </section>
 
