@@ -279,8 +279,7 @@ export default function Home() {
           <div className="skill-cloud" role="list" aria-label="Skills">
             {[
               "React", "React Native", "TypeScript", "Node.js", "PostgreSQL",
-              "Supabase", "LLM systems", "Product design", "Growth marketing",
-              "Sales",
+              "LLM systems", "Product design", "Growth marketing", "Sales",
             ].map((skill) => <span role="listitem" key={skill}>{skill}</span>)}
           </div>
         </div>

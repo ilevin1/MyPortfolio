@@ -29,6 +29,7 @@ test("the source keeps the project content and accessibility affordances", async
   assert.match(app, /Sales & marketing/);
   assert.match(app, /product-minded engineer, marketer, and salesman/);
   assert.match(app, /Growth marketing/);
+  assert.doesNotMatch(app, /Supabase/);
   assert.match(app, /Levin Times/);
   assert.match(app, /Torahly/);
   assert.match(app, /shiurbank-home-2026\.png/);
