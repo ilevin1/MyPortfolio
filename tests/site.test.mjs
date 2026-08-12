@@ -33,7 +33,8 @@ test("the source keeps the project content and accessibility affordances", async
   assert.doesNotMatch(app, /[↗↓↑→←↔]/);
   assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
   assert.match(app, /FOUNDER · SHIURBANK/);
-  assert.match(app, /AI PRODUCT DEVELOPMENT · ARTSCROLL/);
+  assert.match(app, /PRODUCT · ENGINEERING · OPERATIONS/);
+  assert.doesNotMatch(app, /AI PRODUCT DEVELOPMENT · ARTSCROLL/);
   assert.match(app, /WEB · MOBILE · VOICE/);
   assert.doesNotMatch(app, /I FOUNDED|I BUILD AT|I SHIP/);
   assert.doesNotMatch(

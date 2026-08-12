@@ -128,10 +128,10 @@ export default function Home() {
       <div className="marquee" role="region" aria-label="Highlights">
         <div className="marquee-track">
           <span>FOUNDER · SHIURBANK</span><i>◆</i>
-          <span>AI PRODUCT DEVELOPMENT · ARTSCROLL</span><i>◆</i>
+          <span>PRODUCT · ENGINEERING · OPERATIONS</span><i>◆</i>
           <span>WEB · MOBILE · VOICE</span><i>◆</i>
           <span>FOUNDER · SHIURBANK</span><i>◆</i>
-          <span>AI PRODUCT DEVELOPMENT · ARTSCROLL</span><i>◆</i>
+          <span>PRODUCT · ENGINEERING · OPERATIONS</span><i>◆</i>
           <span>WEB · MOBILE · VOICE</span><i>◆</i>
         </div>
       </div>
