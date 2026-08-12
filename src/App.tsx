@@ -140,10 +140,6 @@ export default function Home() {
         <div className="section-heading">
           <p className="section-kicker">Selected work · 2025—Now</p>
           <h2>Products built for real use.<br />Across every surface.</h2>
-          <p className="section-note">
-            Product, design, engineering, infrastructure, and launch—all shaped
-            into one coherent experience.
-          </p>
         </div>
 
         <article className="case-study shiurbank-case">
