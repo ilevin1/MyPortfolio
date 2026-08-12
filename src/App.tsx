@@ -341,7 +341,6 @@ export default function Home() {
 
       <footer>
         <p>© 2026 Isaac Levin</p>
-        <p>Designed to feel like the work.</p>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
