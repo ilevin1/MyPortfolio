@@ -1,7 +1,13 @@
 import { useEffect, useState, type ReactNode } from "react";
 import "./styles.css";
 
-const Arrow = () => <span aria-hidden="true">↗</span>;
+function Arrow({
+  direction = "up-right",
+}: {
+  direction?: "up-right" | "right" | "down" | "up";
+}) {
+  return <span className={`arrow-icon arrow-${direction}`} aria-hidden="true" />;
+}
 
 function ExternalLink({
   href,
@@ -88,7 +94,7 @@ export default function Home() {
           </p>
           <div className="hero-actions reveal-up delay-3">
             <a className="button button-dark" href="#work">
-              See what I&apos;ve built <span aria-hidden="true">↓</span>
+              See what I&apos;ve built <Arrow direction="down" />
             </a>
             <a className="text-link" href="mailto:isaacglevin@gmail.com">
               Start a conversation <Arrow />
@@ -187,18 +193,17 @@ export default function Home() {
               <li>Secure permissions</li>
               <li>Publication design</li>
             </ul>
-            <span className="project-status">In active development <i /></span>
+            <ExternalLink className="project-link" href="https://levintimes.com/">
+              Visit publication <Arrow />
+            </ExternalLink>
           </div>
           <div className="case-visual levin-visual">
-            <div className="paper-shadow paper-back" aria-hidden="true" />
-            <div className="paper-shadow paper-mid" aria-hidden="true" />
-            <div className="newspaper">
-              <img src="/projects/levin-times.png" alt="Levin Times publication identity" />
-              <div className="newspaper-grid">
-                <div><b>OPINION</b><span /></div>
-                <div><b>ANALYSIS</b><span /></div>
-                <div><b>CULTURE</b><span /></div>
-              </div>
+            <div className="product-shot">
+              <img
+                src="/projects/levin-times-home-2026.png"
+                alt="Levin Times homepage with featured reporting and the latest articles"
+              />
+              <span className="product-shot-label">LIVE PUBLICATION · 2026</span>
             </div>
           </div>
         </article>
@@ -335,13 +340,13 @@ export default function Home() {
           <ExternalLink href="https://www.shiurbank.org/">ShiurBank <Arrow /></ExternalLink>
         </div>
         <div className="contact-orbit" aria-hidden="true">
-          <span>IDEA</span><i>→</i><span>BUILD</span><i>→</i><span>SHIP</span>
+          <span>IDEA</span><Arrow direction="right" /><span>BUILD</span><Arrow direction="right" /><span>SHIP</span>
         </div>
       </section>
 
       <footer>
         <p>© 2026 Isaac Levin</p>
-        <a href="#top">Back to top ↑</a>
+        <a href="#top">Back to top <Arrow direction="up" /></a>
       </footer>
     </main>
   );

@@ -23,7 +23,9 @@ test("the source keeps the project content and accessibility affordances", async
   assert.match(app, /Levin Times/);
   assert.match(app, /Torahly/);
   assert.match(app, /shiurbank-home-2026\.png/);
+  assert.match(app, /levin-times-home-2026\.png/);
   assert.match(app, /torahly-source-finder-2026\.png/);
+  assert.doesNotMatch(app, /[↗↓↑→←↔]/);
   assert.doesNotMatch(app, /Portfolio first|Résumé underneath|The work should make the case/);
   assert.match(styles, /prefers-reduced-motion/i);
   await access(new URL("dist/resume/isaac-levin-resume.pdf", root));
